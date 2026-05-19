@@ -2,6 +2,7 @@
 Sistem end-to-end untuk mengekstraksi, memproses, dan memantau sentimen pelanggan dari Google Maps secara real-time.
 
 ## 📸 Demo
+Demo berikut dilakukan dengan data dari review Google Maps untuk brand Tomoro Coffee di daerah Bali, link yang digunakan untuk ekstrasi tersedia pada file **_extractor.py_**.
 <img width="1268" height="522" alt="image" src="https://github.com/user-attachments/assets/01e5418e-a66c-4677-bc9c-14446c254f0d" />
 
 ## 📦 Installation
