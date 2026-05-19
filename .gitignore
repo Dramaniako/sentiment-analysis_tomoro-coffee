@@ -1,0 +1,22 @@
+# Python stuff
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Chrome/Browser Data (NEVER PUSH THIS)
+chrome_profile/
+
+# Data Files (Avoid pushing raw datasets)
+*.jsonl
+*.csv
+
+# Logs & Screenshots
+*.log
+*.png
+
+# VS Code / IDE settings
+.vscode/
+.idea/
+.DS_Store
