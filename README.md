@@ -1,60 +1,55 @@
-Sistem Monitoring Sentimen Sosial & Brand Real-Time (Tomoro Coffee)
-Sistem ini adalah pipeline end-to-end untuk mengekstraksi, memproses, dan menganalisis sentimen pelanggan secara otomatis dari Google Maps. Proyek ini dibangun untuk membantu perusahaan memantau kepuasan pelanggan secara real-time dengan memanfaatkan teknik Web Scraping dan Natural Language Processing (NLP) berbasis Deep Learning.
+#☕ Tomoro Coffee Sentiment Analysis
+Sistem end-to-end untuk mengekstraksi, memproses, dan memantau sentimen pelanggan dari Google Maps secara real-time.
 
-🚀 Arsitektur Sistem
-Pipeline ini terdiri dari tiga tahap utama:
+##📸 Demo
+(Opsional: Jika kamu punya rekaman layar saat dashboard berjalan, kamu bisa upload ke GitHub dan ganti link di bawah ini)
 
-Data Ingestion: Menggunakan Playwright dengan Persistent Context untuk menembus proteksi anti-bot Google Maps dan melakukan ekstraksi ulasan secara otomatis.
+Laporan Analisis Sentimen (PDF/Dashboard)
 
-Data Processing & NLP:
+##📦 Installation
+Clone repositori ini dan instal dependensi yang diperlukan:
 
-Cleaning: Penghapusan noise, URL, emoji, dan karakter non-alfanumerik.
+'''Bash
+git clone https://github.com/username/tomoro-sentiment.git
+cd tomoro-sentiment
+pip install -r requirements.txt'''
+##🛠 Usage
+Ekstraksi Data:
+Masukkan URL lokasi target di extractor.py dan jalankan:
 
-Normalization: Konversi bahasa gaul/slang ke Bahasa Indonesia formal menggunakan kamus khusus.
-
-Classification: Penggunaan model IndoBERT (RoBERTa) yang sudah dilatih khusus untuk analisis sentimen bahasa Indonesia.
-
-Visualization: Dashboard interaktif berbasis Streamlit untuk memvisualisasikan distribusi sentimen dan memantau umpan balik negatif secara cepat.
-
-🛠 Instalasi
-Pastikan kamu sudah menginstal Python (versi 3.9+ disarankan).
-
-Clone repositori ini:
-
-Bash
-git clone https://github.com/username/repository-kamu.git
-cd repository-kamu
-Instal dependensi yang diperlukan:
-
-Bash
-pip install -r requirements.txt
-⚙️ Cara Penggunaan
-Ekstraksi Data: Masukkan URL target Google Maps ke dalam file extractor.py lalu jalankan:
-
-Bash
-python extractor.py
-(Data akan tersimpan secara otomatis dalam format .jsonl).
-
+'''Bash
+python extractor.py'''
 Analisis Sentimen:
-Jalankan mesin NLP untuk membersihkan data dan melakukan klasifikasi sentimen:
+Jalankan mesin NLP untuk pembersihan teks dan klasifikasi:
 
-Bash
-python nlp_engine.py
-Dashboard Visualisasi:
-Jalankan dashboard interaktif untuk melihat hasil analisis:
+'''Bash
+python nlp_engine.py'''
+Dashboard:
+Jalankan dashboard interaktif:
 
-Bash
-python -m streamlit run dashboard.py
-📊 Hasil (Dataset Summary)
-Sistem ini mampu mengklasifikasikan ulasan ke dalam tiga kategori:
+'''Bash
+python -m streamlit run dashboard.py'''
+##✨ Features
+Anti-Bot Scraping: Mengatasi proteksi Google Maps dengan Persistent Context.
 
-Positif: Mengidentifikasi kepuasan pelanggan terkait produk/layanan.
+Slang Normalization: Pembersihan teks otomatis untuk bahasa gaul/slang Indonesia.
 
-Negatif: Mengidentifikasi pain points pelanggan untuk perbaikan operasional.
+AI Sentiment Engine: Menggunakan model IndoBERT untuk klasifikasi emosi.
 
-Netral: Ulasan yang bersifat informatif atau deskriptif.
+Dashboard Visual: Visualisasi data interaktif untuk pengambilan keputusan bisnis.
 
-📝 Catatan Penting
-Security: Harap pastikan folder chrome_profile tidak pernah diunggah ke repository publik karena mengandung session cookies.
+##🧰 Tech Stack
+Python 3.11
 
-Dependencies: Proyek ini menggunakan transformers dan torch (PyTorch). Pastikan koneksi internet stabil saat menjalankan nlp_engine.py pertama kali untuk mengunduh model.
+Playwright: Web automation & scraping.
+
+Transformers (IndoBERT): Model AI untuk NLP.
+
+Pandas: Manipulasi data.
+
+Streamlit: Dashboard UI.
+
+Plotly: Visualisasi grafik.
+
+🤝 Contributing
+Kontribusi selalu terbuka! Jika ada saran untuk penambahan fitur atau perbaikan model, silakan buka issue atau kirimkan pull request.
